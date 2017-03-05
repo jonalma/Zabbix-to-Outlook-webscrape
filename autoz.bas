@@ -1,4 +1,3 @@
-Attribute VB_Name = "Module1111"
 Sub Zalert()
 'Note that this example opens and displays a new email message in Outlook, enters subject, body and attaches a file, but does not send a mail.
 Dim outlook As outlook.Application
@@ -18,8 +17,8 @@ For X = 0 To (IE_count - 1)
     my_title = objShell.Windows(X).Document.Title
     
     'Check if Zabbix tab is open
-    'If my_title Like "*Zabbix*" Or my_url Like "*nms*" Then   'identify the existing web page
-    If InStr(my_title, "Zabbix") Or InStr(my_url, "nms") Then
+    'If my_title Like "*Zabbix*"
+    If InStr(my_title, "Zabbix") Then
         'MsgBox ("zabbix")
         Set ie = objShell.Windows(X)
         Exit For
